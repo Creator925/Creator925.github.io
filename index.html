@@ -2,20 +2,29 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Generalist</title>
 		<style>
+			/* 基础样式 */
 			body {
 				font-family: Arial, sans-serif;
 				background-color: #f4f4f4;
 				color: #333;
 				margin: 0;
-				padding: 20px;
+				padding: 0; /* 移除 body 的内边距 */
 			}
+
+			/* h1 样式 */
 			h1 {
 				text-align: center;
-				color: #4CAF50;
+				color: #fff; /* 文字颜色改为白色 */
+				background-color: #4CAF50; /* 背景颜色 */
+				margin: 0; /* 移除默认的外边距 */
+				padding: 20px 0; /* 增加内边距 */
+				font-size: 2em;
 			}
+
+			/* 导航标题样式 */
 			nav {
 				font-size: 1.2em;
 				font-weight: bold;
@@ -24,57 +33,65 @@
 				border-bottom: 2px solid #555;
 				padding-bottom: 5px;
 			}
+
+			/* 内容区域样式 */
 			div {
 				background-color: #fff;
 				padding: 15px;
-				margin-bottom: 20px;
+				margin: 20px; /* 增加外边距 */
 				border-radius: 8px;
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 			}
+
+			/* 链接布局 */
 			p {
 				margin: 10px 0;
-				display: inline-block; /* 使 p元素成为行内块元素 */
-				width: calc(33% - 20px); /* 设置宽度为容器的三分之一减去一些边距 */
-				vertical-align: top; /* 顶部对齐 */
-				margin-right: 10px; /* 右侧外边距 */
-				text-align: center; /* 文本居中 */
+				display: inline-block;
+				width: calc(33% - 20px);
+				vertical-align: top;
+				margin-right: 10px;
+				text-align: center;
 			}
+
 			p:nth-child(3n) {
-			    margin-right: 0; /* 每三个p元素的最后一个不设置右侧外边距 */
+				margin-right: 0;
 			}
+
+			/* 链接样式 */
 			a {
 				color: #1E90FF;
 				text-decoration: none;
 				display: block;
 				padding: 5px 0;
 			}
+
 			a:hover {
 				text-decoration: underline;
 			}
 
-			/* 新增的footer样式 */
+			/* 页脚样式 */
 			footer {
-				background-color: #333; /* 背景颜色 */
-				color: #fff; /* 文字颜色 */
-				text-align: center; /* 文字居中 */
-				padding: 15px 0; /* 内边距 */
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				padding: 15px 0;
 				margin-top: 20px; /* 与上方内容的间距 */
-				border-radius: 8px; /* 圆角 */
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+				border-radius: 0; /* 移除圆角 */
+				box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
 			}
 
 			footer p {
-				margin: 0; /* 去掉默认的外边距 */
-				font-size: 14px; /* 字体大小 */
+				margin: 0;
+				font-size: 14px;
 			}
 
 			footer a {
-				color: #4CAF50; /* 链接颜色 */
-				text-decoration: none; /* 去掉下划线 */
+				color: #4CAF50;
+				text-decoration: none;
 			}
 
 			footer a:hover {
-				text-decoration: underline; /* 鼠标悬停时显示下划线 */
+				text-decoration: underline;
 			}
 		</style>
 	</head>
@@ -121,7 +138,10 @@
 			<p><a href="https://fontawesome.com/" target="_blank">font awesome</a></p>
 		</div>
 		<footer>
-			<p>&copy; 2025 Generalist百事通 | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
+			<p>&copy; 2025 Generalist百事通
+			<a href="#">隐私政策</a>
+			<a href="#">使用条款</a>
+		</p>
 		</footer>
 	</body>
 </html>
