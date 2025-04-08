@@ -6,9 +6,15 @@ body {
 	padding: 0;
 }
 
+.container {
+	background-color: #557c83;
+	margin: 0;
+	padding: 0;
+}
+
 header {
 	color: #fff;
-	background-color: #4CAF50;
+	background-color: #7d9fc0;
 	text-align: center;
 	margin: 0;
 	padding: 5px 0;
@@ -26,7 +32,7 @@ nav {
 
 /* 内容区域样式 */
 section {
-	background-color: #fff;
+	background-color: #3aada8;
 	padding: 15px;
 	margin: 20px;
 	border-radius: 8px;
@@ -49,7 +55,7 @@ section {
 
 /* 链接样式 */
 a {
-	color: #1E90FF;
+	color: #fff;
 	text-decoration: none;
 	display: block;
 	padding: 5px 0;
