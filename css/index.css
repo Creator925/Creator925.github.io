@@ -42,9 +42,9 @@ section {
 	margin: 10px 0;
 	display: inline-block;
 	width: calc(33% - 20px);
+	text-align: center;
 	vertical-align: top;
 	margin-right: 10px;
-	text-align: center;
 }
 
 .a:nth-child(3n) {
