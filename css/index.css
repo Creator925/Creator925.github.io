@@ -35,7 +35,7 @@ header {
 	line-height: 50px;
 	box-sizing: border-box;
 	outline: none;
-	border: none;
+	border: 2.5px solid #3aada8;
 	border-top-left-radius: 25px;
 	border-bottom-left-radius: 25px;
 	padding: 0 20px;
