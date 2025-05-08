@@ -38,6 +38,9 @@ body {
 	height: 50px;
 	line-height: 50px;
 	box-sizing: border-box;
+	background-color: transparent;
+	color: #fff;
+	font-size: 20px;
 	outline: none;
 	border: 2.5px solid #3aada8;
 	border-top-left-radius: 25px;
@@ -59,7 +62,7 @@ body {
 	border-bottom-right-radius: 25px;
 }
 .search input:focus {
-	box-shadow: 0 0 10px #eee;
+	box-shadow: 0 0 20px #eee;
 }
 /* 导航标题样式 */
 .nav {
