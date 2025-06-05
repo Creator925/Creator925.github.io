@@ -1,0 +1,27 @@
+{
+	"messages": [
+		{
+			"username": "匿名用户",
+			"content": "这是一个测试留言",
+			"contact": "user@example.com",
+			"timestamp": "2023/5/18 14:30:22"
+		},
+		{
+			"username": "开发者",
+		    "content": "欢迎使用留言板功能",
+		    "contact": "",
+		    "timestamp": "2023/5/17 09:15:33"
+		}
+	],
+	"config": {
+		"maxMessages": 50,
+		"defaultUsername": "匿名用户",
+		"storageKey": "generalist_messages"
+	},
+	"uiElements": {
+		"submit-button": "submit-btn",
+		"messageInput": "message-content",
+		"container": "messages-container",
+		"emptyMessage": "暂无留言，快来第一个留言吧"
+	}
+}

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	submitBtn.addEventListener('click', function() {
 		const username = document.getElementById('username').value.trim();
 		const content = messageContent.value.trim();
-		const contact = document.getElementById('contact').value.trim();
+		const contact = document.getElementById('contact').value.trim();  //trim() 去除前后空格
 		
 		if (!content) {
 			alert('留言内容不能为空！');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 		// 创建留言对象
 		const message = {
-			username: username || '匿名用户',
+			username: username || '匿名用户',  //用户名为空 -> '匿名用户'
 			content: content,
 			contact: contact,
 			timestamp: new Date().toLocaleString()
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					<span class="message-time">${msg.timestamp}</span>
 				</div>
 				<div class="message-body">${msg.content}</div>
-				${msg.contact ? `<div class="message-contact">联系方式：${msg.contact}</div>` : ''}
+				${msg.contact ? `<div class="message-contact">联系方式：${msg.contact}</div>` :''}
 				<div class="message-divider"></div>
 			`;
 			messagesContainer.appendChild(messageElement);
