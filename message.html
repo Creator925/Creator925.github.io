@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>留言板</title>
+		<link type="text/css" rel="stylesheet" href="css/message.css" />
+		<link rel = "stylesheet" href = "https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css" />
+		<script  type="text/javascript" src="js/index.js"></script>
+	</head>
+	<body>
+		<form class="message-board" action="">
+			<div class="nav">留言板</div>
+			<div class="line"></div>
+			<div class="message-form">
+				<div class="form-group">
+					<label for="username">昵称：</label>
+					<input type="text" id="username" placeholder="您的昵称(可选)" maxlength="20" required />
+				</div>
+				<div class="form-group">
+					<label for="message-content">留言内容：</label>
+					<textarea id="message-content" placeholder="请输入您的留言(最多200字)" maxlength="200" required /></textarea>
+				</div>
+				<div class="form-group">
+					<label for="contact">联系方式：</label>
+					<input type="text" id="contact" placeholder="邮箱/QQ/微信(可选)">
+				</div>
+				<button id="submit-btn" class="submit-btn">提交留言</button>
+			</div>
+			
+			<div class="message-list">
+				<h4>最新留言</h4>
+				<div class="messages-container">
+					<!-- 留言将动态加载到这里 -->
+					<div class="no-message">暂无留言，快来第一个留言吧~</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
