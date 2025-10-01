@@ -6,6 +6,10 @@
 	/* 调节透明度 */
 	opacity: 1;
 }
+
+.headline {
+	text-align: center;
+}
 .message-board {
     background: #fff;
     border-radius: 8px;
@@ -15,6 +19,8 @@
 }
 .message-form {
     margin-bottom: 30px;
+		display: flex;
+		flex-direction: column;
 }
 .form-group {
     margin-bottom: 15px;
