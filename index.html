@@ -5,24 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Generalist--专注于程序设计的导航</title>
 		<link type="text/css" rel="stylesheet" href="css/index.css" />
-		<link rel = "stylesheet" href = "https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css" />
+		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+					integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+		<script src="https://kit.fontawesome.com/bfe33d162c.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div class="container">
-			<div class="header">
+			<header>
 				<h2>Generalist百事通</h2>
-				<form class="search-container" action="https://www.baidu.com/s" target="_blank">
+				<div class="search-container" target="_blank">
 					<label class="search">
-						<input type="text" name="wd" />
-						<button type="submit">搜索</button>
+						<input type="text" name="wd" id="text-input" />
+						<button type="submit" id="search-btn"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></button>
 					</label>
-				</form>
-			</div>
+				</div>
+			</header>
 			
-			<div class="main">
+			<main>
 				<section>
-					<div class="nav">IT知识库</div>
-					<div class="line"></div>
+					<nav>IT知识库</nav>
+					<hr />
 					<div class="a">
 						<a href="https://oi-wiki.org/" target="_blank">OI-Wiki</a>
 					</div>
@@ -47,10 +49,13 @@
 					<div class="a">
 						<a href="https://www.oschina.net/" target="_blank">OSCHINA-开源中国</a>
 					</div>
+					<div class="a">
+						<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank">清华开源软件镜像站</a>
+					</div>
 				</section>
 				<section>
-					<div class="nav">程序设计题库</div>
-					<div class="line"></div>
+					<nav>程序设计题库</nav>
+					<hr />
 					<div class="a">
 						<a href="https://www.lintcode.com/" target="_blank">LintCode</a>
 					</div>
@@ -92,8 +97,8 @@
 					</div>
 				</section>
 				<section>
-					<div class="nav">前端</div>
-					<div class="line"></div>
+					<nav>前端</nav>
+					<hr />
 					<div class="a">
 						<a href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN</a>
 					</div>
@@ -123,8 +128,8 @@
 					</div>
 				</section>
 				<section>
-					<div class="nav">代码及项目管理平台</div>
-					<div class="line"></div>
+					<nav>代码及项目管理平台</nav>
+					<hr />
 					<div class="a">
 						<a href="https://github.com/" target="_blank">Github</a>
 					</div>
@@ -136,18 +141,8 @@
 					</div>
 				</section>
 				<section>
-					<div class="nav">镜像站</div>
-					<div class="line"></div>
-					<div class="a">
-						<a href="https://fcp7.com/" target="_blank">每日教程精选</a>
-					</div>
-					<div class="a">
-						<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank">清华开源软件镜像站</a>
-					</div>
-				</section>
-				<section>
-					<div class="nav">实用工具</div>
-					<div class="line"></div>
+					<nav>实用工具</nav>
+					<hr>
 					<div class="a">
 						<a href="https://suijimimashengcheng.bmcx.com/" target="_blank">随机密码生成器</a>
 					</div>
@@ -159,8 +154,8 @@
 					</div>
 				</section>
 				<section>
-					<div class="nav">网课频道</div>
-					<div class="line"></div>
+					<nav>网课频道</nav>
+					<hr />
 					<div class="a">
 						<a href="https://www.zhihuishu.com/" target="_blank">智慧树</a>
 					</div>
@@ -171,7 +166,7 @@
 						<a href="https://www.cnki.net/" target="_blank">中国知网</a>
 					</div>
 				</section>
-			</div>
+			</main>
 			<footer>
 				<p>&copy; 2025 Generalist百事通</p>
 				<div class="message"><a href="message.html" id="message">留言板</a></div>
@@ -179,6 +174,18 @@
 		</div>
 		<script>
 			alert("网站还在开发中，欢迎各位小伙伴在页面最下面的留言板中提出宝贵的意见")
+			const textInput = document.getElementById("text-input");
+			const searchBtn = document.getElementById("search-btn");
+			searchBtn.addEventListener("click", () => {
+				const text = textInput.value.trim();
+				if(text === ""){
+					alert("请输入搜索内容！");
+					textInput.focus();
+					return ;
+				} else {
+					location.href = "https://www.baidu.com/s?wd=" + text;
+				}
+			});
 		</script>
 	</body>
 </html>
