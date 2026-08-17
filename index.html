@@ -170,14 +170,23 @@
 			alert("网站还在开发中，欢迎各位小伙伴在页面最下面的留言板中提出宝贵的意见")
 			const textInput = document.getElementById("text-input");
 			const searchBtn = document.getElementById("search-btn");
-			searchBtn.addEventListener("click", () => {
+
+			function doSearch() {
 				const text = textInput.value.trim();
-				if(text === ""){
+				if (text === "") {
 					alert("请输入搜索内容！");
 					textInput.focus();
-					return ;
+					return;
 				} else {
 					location.href = "https://cn.bing.com/search?q=" + text;
+				}
+			}
+
+			searchBtn.addEventListener("click", doSearch);
+
+			textInput.addEventListener("keydown", (e) => {
+				if (e.key === "Enter") {
+					doSearch();
 				}
 			});
 		</script>
